@@ -1,0 +1,19 @@
+:host button {
+  background-color: var(--background-color);
+  width: 100px;
+  height: 40px;
+  border: 1px solid var(--background-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  &:hover {
+    background-color: color-mix(in srgb, var(--background-color) 80%, transparent);
+    border-color: color-mix(in srgb, var(--background-color) 80%, transparent);
+  }
+}
+
+:host-context(.disabled) {
+  button {
+    background-color: var(--background-color-disabled);
+    border: 1px solid var(--background-color-disabled);
+  }
+}
